@@ -71,14 +71,19 @@ public class Hamburger {
     
     @Override
     public String toString() {
-        String output = "A hamburger with ";
+        String output = "A hamburger ";
+        if (!toppings.isEmpty()) {
+            output += "with ";
+        }
         for (int i = 0; i < toppings.size() - 1; i++) {
             output += toppings.get(i).toLowerCase() + ", ";
         }
         if (toppings.size() > 1) {
             output += "and ";
         }
-        output += toppings.get(toppings.size() - 1).toLowerCase();
+        if (!toppings.isEmpty()) {
+            output += toppings.get(toppings.size() - 1).toLowerCase();
+        }
         output = output.substring(0, output.length());
         output += " on a sesame seed bun";
         return output;
