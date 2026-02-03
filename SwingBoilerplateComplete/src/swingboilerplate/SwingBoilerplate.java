@@ -42,4 +42,6 @@ public class SwingBoilerplate {
         
         new Body_Controller(bodyPnl, menuPnl);
     }
+
+    
 }
